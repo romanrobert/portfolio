@@ -321,8 +321,6 @@ section.hero .button-group {
   background: linear-gradient(to right, #c2e59c, #64b3f4);
   width: 15rem;
   height: 15rem;
-  top: var(--position-y);
-  right: var(--position-x);
   border-radius: 100vw;
   filter: blur(50px);
   opacity: 0.2;
@@ -348,6 +346,9 @@ section.hero .button-group {
 }
 
 @keyframes move {
+  0% {
+    transform: translate(var(--position-x), var(--position-y));
+  }
   100% {
     transform: translate(var(--animate-to-x), var(--animate-to-y));
   }

@@ -12,8 +12,8 @@
   background: colors.$gradient-lime;
   width: 15rem;
   height: 15rem;
-  top: var(--position-y);
-  right: var(--position-x);
+  //   top: var(--position-y);
+  //   right: var(--position-x);
   border-radius: 100vw;
   filter: blur(50px);
   opacity: 0.2;
@@ -39,6 +39,9 @@
 }
 
 @keyframes move {
+  0% {
+    transform: translate(var(--position-x), var(--position-y));
+  }
   100% {
     transform: translate(var(--animate-to-x), var(--animate-to-y));
   }
