@@ -1,0 +1,8 @@
+@use "../abstracts/colors";
+@use "../abstracts/fonts";
+@use "../abstracts/variables";
+
+footer {
+  border-top: 1px solid colors.$type-100;
+  margin-top: 7.5rem;
+}

@@ -1,0 +1,74 @@
+@use "../abstracts/colors";
+@use "../abstracts/fonts";
+@use "../abstracts/variables";
+
+section.contact {
+  margin-top: 7.5rem;
+  display: flex;
+}
+
+section.contact ul {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  max-width: max-content;
+}
+
+section.contact ul li i {
+  padding: 1.25rem;
+  background-color: colors.$bg-100;
+  border: 1px solid transparent;
+  transition: all 250ms variables.$easing;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+}
+
+.contact-info:hover i {
+  border: 1px solid colors.$type-100;
+  background-color: colors.$bg-200;
+}
+
+form {
+  padding: 3.25rem 2.25rem;
+  background-color: colors.$type-50;
+  border-radius: 0.375rem;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+label {
+  font-size: 0.875rem;
+  color: colors.$type-600;
+}
+
+input,
+textarea {
+  border: 1px solid colors.$type-100;
+  background-color: transparent;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.form-group,
+.input-container,
+form {
+  display: flex;
+}
+
+.form-group {
+  gap: 1.125rem;
+}
+
+.input-container {
+  flex-direction: column;
+  gap: 0.5rem;
+}
