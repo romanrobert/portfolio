@@ -1,0 +1,57 @@
+@use "./abstracts/colors";
+@use "./abstracts/fonts";
+@use "./abstracts/variables";
+
+@use "./components/buttons";
+@use "./components/cta";
+
+html {
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  color: colors.$type;
+  background-color: colors.$bg;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: fonts.$bold;
+  color: colors.$type;
+  margin-bottom: 1.875rem;
+}
+
+h1 {
+  font-size: fonts.$size-h1;
+}
+
+h2 {
+  font-size: fonts.$size-h2;
+}
+
+h3 {
+  font-size: fonts.$size-h3;
+}
+
+p {
+  color: colors.$type-600;
+}
+
+p.accent-type {
+  font-weight: fonts.$semi-bold;
+  color: colors.$accent;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.wrapper {
+  max-width: clamp(20rem, 100vw, 64rem);
+  padding: 1rem;
+  margin: 0 auto;
+}

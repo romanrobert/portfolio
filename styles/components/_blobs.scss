@@ -1,0 +1,45 @@
+@use "../abstracts/colors";
+@use "../abstracts/fonts";
+@use "../abstracts/variables";
+
+.blob {
+  --position-x: 4vw;
+  --position-y: 5vh;
+  --animate-to-x: 10vw;
+  --animate-to-y: 20vh;
+  position: fixed;
+  z-index: -1;
+  background: colors.$gradient-lime;
+  width: 15rem;
+  height: 15rem;
+  top: var(--position-y);
+  right: var(--position-x);
+  border-radius: 100vw;
+  filter: blur(50px);
+  opacity: 0.2;
+  animation: move 10s variables.$easing infinite alternate;
+}
+
+.blob:nth-child(2) {
+  background-color: colors.$gradient-orange;
+  width: 25rem;
+  height: 25rem;
+}
+
+.blob:nth-child(3) {
+  background-color: colors.$gradient-pink;
+  width: 20rem;
+  height: 20rem;
+}
+
+.blob:nth-child(4) {
+  background-color: colors.$gradient-yellow;
+  width: 5rem;
+  height: 5rem;
+}
+
+@keyframes move {
+  100% {
+    transform: translate(var(--animate-to-x), var(--animate-to-y));
+  }
+}

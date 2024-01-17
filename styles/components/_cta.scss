@@ -1,0 +1,24 @@
+@use "../abstracts/colors";
+@use "../abstracts/fonts";
+@use "../abstracts/variables";
+
+.cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 0rem;
+  border-top: 1px solid colors.$bg-100;
+  border-bottom: 1px solid colors.$bg-100;
+  gap: 1rem;
+}
+
+.cta h2 {
+  max-width: 30ch;
+}
+
+@media screen and (max-width: 700px) {
+  .cta {
+    flex-direction: column;
+    text-align: center;
+  }
+}

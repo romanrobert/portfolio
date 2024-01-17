@@ -1,0 +1,28 @@
+@use "../abstracts/colors";
+@use "../abstracts/fonts";
+@use "../abstracts/variables";
+
+section.hero {
+  margin-top: 7.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+section.hero p {
+  max-width: 50ch;
+  text-align: center;
+}
+
+section.hero .button-group {
+  margin-top: 3rem;
+}
+
+@media screen and (max-width: 35rem) {
+  section.hero {
+    margin-top: 3rem;
+    justify-content: flex-start;
+    text-align: start;
+  }
+}

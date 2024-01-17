@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"
+      defer
+    ></script>
+    <script src="./script.js" defer></script>
+    <title>Roman Robert | Frontend Developer</title>
+  </head>
+  <body>
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <header class="main-header wrapper">
+      <img class="logo" src="./assets/logo.svg" alt="Roman Robert logo" />
+
+      <ul class="nav-list">
+        <li class="nav-link"><a href="#home">Home</a></li>
+        <li class="nav-link"><a href="#about">About</a></li>
+        <li class="nav-link"><a href="#projects">Projects</a></li>
+        <li><button class="secondary small">Contact</button></li>
+      </ul>
+
+      <dotlottie-player
+        class="mobile-nav-btn"
+        src="https://lottie.host/aebd0d09-f0b3-4971-ab81-a0d5895e6851/HGCfTux5Qd.json"
+        background="transparent"
+        speed="1"
+        style="width: 40px; height: 40px"
+      ></dotlottie-player>
+    </header>
+    <section class="hero wrapper" id="home">
+      <p class="accent-type">Roman Robert</p>
+      <h1>FRONT END DEVELOPER</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
+        recusandae nobis sapiente a! Cupiditate ducimus blanditiis laudantium!
+        Ipsam, laborum odit.
+      </p>
+      <div class="button-group">
+        <button class="primary">View Projects</button>
+        <button class="secondary">Read more</button>
+      </div>
+    </section>
+    <section class="about wrapper" id="about">
+      <div class="images">
+        <div class="img-wrapper">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1678715564125-c2132b9fee21?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+          />
+        </div>
+        <div class="img-wrapper">
+          <img
+            src="https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="about-content">
+        <p class="accent-type">About</p>
+        <h2>Music, Coffee and Coding</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Exercitationem, placeat laboriosam! Optio repudiandae ea, voluptatibus
+          mollitia molestiae sed excepturi ut dignissimos a nulla, ducimus
+          voluptas quidem ullam at voluptatem nihil? Error, labore. Voluptate,
+          nobis voluptas quo quia velit labore! Iusto.
+        </p>
+      </div>
+    </section>
+    <section class="skills"></section>
+  </body>
+</html>
