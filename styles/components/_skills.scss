@@ -1,0 +1,56 @@
+@use "../abstracts/colors";
+@use "../abstracts/fonts";
+@use "../abstracts/variables";
+
+section.skills {
+  margin-top: calc(7.5rem + 5rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+
+section.skills img {
+  max-width: 50%;
+}
+
+.skills-content h2 {
+  max-width: 30ch;
+}
+
+.skills-content p {
+  text-wrap: balance;
+}
+
+.skills-content ul {
+  margin-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.skills-content ul li {
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1.365rem;
+  color: colors.$type;
+  border: 1px solid colors.$type-100;
+  background-color: colors.$bg-200;
+  border-radius: 0.25rem;
+}
+
+.skills-content ul li p {
+  color: colors.$type;
+  font-weight: fonts.$semi-bold;
+}
+
+@media screen and (max-width: 45rem) {
+  section.skills {
+    margin-top: 3rem;
+  }
+
+  section.skills img {
+    display: none;
+  }
+}

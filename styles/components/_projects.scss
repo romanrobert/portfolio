@@ -1,0 +1,61 @@
+@use "../abstracts/colors";
+@use "../abstracts/fonts";
+@use "../abstracts/variables";
+
+section.projects {
+  margin-top: 7.5rem;
+}
+
+.projects header {
+  text-align: center;
+}
+
+.projects-content {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: end;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.projects-content article {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 2.5rem;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  padding: 0rem 0rem 2.5rem 0rem;
+  border: 1px solid transparent;
+  transition: all 500ms variables.$easing;
+}
+
+.projects-content article:hover {
+  border: 1px solid colors.$type-100;
+  background-color: colors.$bg-100;
+}
+
+.projects-content article:hover .project-img-wrapper img {
+  scale: 1.2;
+}
+
+.project-img-wrapper {
+  overflow: hidden;
+}
+
+.project-img-wrapper img {
+  transition: all 500ms variables.$easing;
+  aspect-ratio: 1;
+}
+
+@media screen and (max-width: 45rem) {
+  .projects-content article {
+    gap: 1rem;
+  }
+
+  button.pill {
+    margin-top: 1rem;
+  }
+}

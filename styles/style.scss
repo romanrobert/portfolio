@@ -11,7 +11,10 @@
 @use "./components/hero";
 @use "./components/about";
 @use "./components/blobs";
+@use "./components/skills";
+@use "./components/projects";
 
-.skills {
+.projects {
+  margin-top: 7.5rem;
   min-height: 100vh;
 }

@@ -37,7 +37,7 @@ button.secondary {
 
 button.secondary:hover {
   background-color: colors.$bg-200;
-  border: 1px solid colors.$bg-200;
+  border: 1px solid colors.$type-100;
 }
 
 button.small {
@@ -51,6 +51,7 @@ button.pill {
   border: 1px solid colors.$type;
   box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.1);
   background-color: transparent;
+  margin-top: 2.5rem;
 }
 
 .button-group {

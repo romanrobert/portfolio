@@ -46,6 +46,7 @@ button.pill {
   border: 1px solid rgb(255, 255, 255);
   box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.1);
   background-color: transparent;
+  margin-top: 2.5rem;
 }
 
 .button-group {
@@ -92,6 +93,11 @@ h2,
 h3 {
   font-weight: 700;
   color: rgb(255, 255, 255);
+  text-wrap: balance;
+}
+
+h1,
+h2 {
   margin-bottom: 1.875rem;
 }
 
@@ -105,6 +111,7 @@ h2 {
 
 h3 {
   font-size: clamp(1rem, 4vw, 1.125rem);
+  margin-bottom: 0.625rem;
 }
 
 p {
@@ -248,7 +255,7 @@ section.hero .button-group {
   margin-top: 3rem;
 }
 
-@media screen and (max-width: 35rem) {
+@media screen and (max-width: 45rem) {
   section.hero {
     margin-top: 3rem;
     justify-content: flex-start;
@@ -297,7 +304,7 @@ section.hero .button-group {
   scale: 1.5;
 }
 
-@media screen and (max-width: 35rem) {
+@media screen and (max-width: 45rem) {
   section.about {
     margin-top: 3rem;
     flex-direction: column;
@@ -353,6 +360,114 @@ section.hero .button-group {
     transform: translate(var(--animate-to-x), var(--animate-to-y));
   }
 }
-.skills {
+section.skills {
+  margin-top: 12.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+
+section.skills img {
+  max-width: 50%;
+}
+
+.skills-content h2 {
+  max-width: 30ch;
+}
+
+.skills-content p {
+  text-wrap: balance;
+}
+
+.skills-content ul {
+  margin-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.skills-content ul li {
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1.365rem;
+  color: rgb(255, 255, 255);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0.25rem;
+}
+
+.skills-content ul li p {
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+}
+
+@media screen and (max-width: 45rem) {
+  section.skills {
+    margin-top: 3rem;
+  }
+  section.skills img {
+    display: none;
+  }
+}
+section.projects {
+  margin-top: 7.5rem;
+}
+
+.projects header {
+  text-align: center;
+}
+
+.projects-content {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: end;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.projects-content article {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 2.5rem;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  padding: 0rem 0rem 2.5rem 0rem;
+  border: 1px solid transparent;
+  transition: all 500ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+
+.projects-content article:hover {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.projects-content article:hover .project-img-wrapper img {
+  scale: 1.2;
+}
+
+.project-img-wrapper {
+  overflow: hidden;
+}
+
+.project-img-wrapper img {
+  transition: all 500ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  aspect-ratio: 1;
+}
+
+@media screen and (max-width: 45rem) {
+  .projects-content article {
+    gap: 1rem;
+  }
+  button.pill {
+    margin-top: 1rem;
+  }
+}
+.projects {
+  margin-top: 7.5rem;
   min-height: 100vh;
 }/*# sourceMappingURL=style.css.map */
