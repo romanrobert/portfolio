@@ -69,18 +69,19 @@ header.main-header {
 @media screen and (max-width: 35rem) {
   .mobile-nav-btn {
     display: block;
+    z-index: 1000;
   }
 
   .nav-list {
     position: absolute;
-    padding: 2rem;
-    width: 80vw;
-    min-height: 50vh;
-    top: 5rem;
+    padding: 10rem 2rem;
+    width: 100vw;
+    min-height: 100vh;
+    top: -2.5rem;
     right: 0;
     flex-direction: column;
-    background-color: colors.$bg;
-    border: 1px solid colors.$type-600;
+    background-color: colors.$bg-500;
+    backdrop-filter: blur(10px);
     transform: translateX(120%);
     opacity: 1;
     transition: transform 500ms variables.$easing,

@@ -48,14 +48,20 @@
     margin-top: 3rem;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
   }
 
   .images {
     align-items: center;
+    margin-left: auto;
   }
 
   .img-wrapper:nth-child(2) {
-    transform: translate(-2rem, 0rem);
+    transform: translate(0rem, 0rem);
+    justify-self: end;
+  }
+
+  .img-wrapper:nth-child(1) {
+    display: none;
   }
 }

@@ -56,6 +56,21 @@ textarea {
   background-color: transparent;
   padding: 0.5rem;
   border-radius: 0.25rem;
+  color: colors.$type;
+  transition: all 350ms variables.$easing;
+}
+
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus {
+  border: 1px solid colors.$type;
+  outline: none;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  outline: none;
 }
 
 .form-group,
@@ -71,4 +86,26 @@ form {
 .input-container {
   flex-direction: column;
   gap: 0.5rem;
+  flex-grow: 1;
+}
+
+@media screen and (max-width: 45rem) {
+  section.contact {
+    margin-top: 3rem;
+    flex-direction: column;
+  }
+
+  section.contact ul {
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .form-group {
+    flex-direction: column;
+  }
+
+  form {
+    padding: 1rem;
+    box-shadow: 0px 30px 60px 0px rgba(96, 22, 252, 0.03);
+  }
 }

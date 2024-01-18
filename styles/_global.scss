@@ -7,7 +7,7 @@
 
 html {
   font-family: "Inter", sans-serif;
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
@@ -60,4 +60,26 @@ p.accent-type {
   max-width: clamp(20rem, 100vw, 64rem);
   padding: 1rem;
   margin: 0 auto;
+}
+
+//Lenis
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }
