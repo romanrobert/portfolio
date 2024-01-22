@@ -3,6 +3,11 @@
 const mobileMenuButton = document.querySelector(".mobile-nav-btn");
 const mobileNavigation = document.querySelector(".nav-list");
 const navigationLinks = mobileNavigation.querySelectorAll("li");
+const staggerItems = document.querySelectorAll(".stagger-item");
+
+window.onload = () => {
+  staggerItemsIn(staggerItems);
+};
 
 let windowWidth = window.innerWidth;
 

@@ -6,9 +6,16 @@ footer.footer {
   margin-top: 7.5rem;
   padding: 3rem 1rem;
   display: flex;
-  align-items: center;
+  align-items: end;
   justify-content: space-between;
   border-top: 1px solid colors.$type-50;
+  flex-wrap: wrap;
+}
+
+footer.footer .left p {
+  margin-top: 0.5rem;
+  text-wrap: balance;
+  max-width: 45ch;
 }
 
 @media screen and (max-width: 45rem) {

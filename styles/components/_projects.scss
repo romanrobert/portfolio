@@ -49,6 +49,7 @@ section.projects {
 .project-img-wrapper img {
   transition: all 500ms variables.$easing;
   aspect-ratio: 1;
+  object-position: top;
 }
 
 @media screen and (max-width: 45rem) {

@@ -1,0 +1,67 @@
+@use "../abstracts/colors";
+@use "../abstracts/fonts";
+@use "../abstracts/variables";
+
+header.project-header {
+  margin: 0 auto;
+  padding: 7.5rem 0rem 4.5rem 0rem;
+  border-bottom: 1px solid colors.$type-100;
+  text-align: center;
+}
+
+.project-details {
+  margin-top: 4rem;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.project-details .project-img-wrapper {
+  border-radius: 0.25rem;
+  overflow: hidden;
+  border: 1px solid colors.$bg-100;
+}
+
+.project-img-wrapper:hover img {
+  scale: 1.2;
+}
+
+.project-information,
+.project-information ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-information ul {
+  gap: 2.5rem;
+  margin-top: 3.25rem;
+}
+
+.project-information ul li p:nth-child(2) {
+  color: colors.$type;
+}
+
+.project-information button {
+  margin-top: 1rem;
+}
+
+.project-information button i {
+  margin-left: 0.5rem;
+}
+
+.project-information p a {
+  text-decoration: underline;
+  color: colors.$type;
+}
+
+@media screen and (max-width: 45rem) {
+  header.project-header {
+    padding: 3rem 0rem 3rem 0rem;
+  }
+
+  .project-details {
+    grid-template-columns: repeat(1, 1fr);
+    align-items: start;
+  }
+}

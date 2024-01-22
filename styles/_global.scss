@@ -83,3 +83,39 @@ html.lenis {
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
 }
+
+//stagger items
+
+.stagger-item {
+  transform: translateY(2rem);
+  opacity: 0;
+  transition: transform 500ms variables.$easing, opacity 500ms variables.$easing;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+::view-transition-old(root) {
+  animation: fadeOut 300ms ease;
+}
+
+::view-transition-new(root) {
+  animation: fadeIn 300ms ease;
+}

@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="view-transition" content="same-origin"/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -37,19 +38,22 @@
       ></dotlottie-player>
     </header>
     <section class="hero wrapper" id="home">
-      <p class="accent-type">Roman Robert</p>
-      <h1>FRONT END DEVELOPER</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-        recusandae nobis sapiente a! Cupiditate ducimus blanditiis laudantium!
-        Ipsam, laborum odit.
+      <p class="accent-type stagger-item">Roman Robert</p>
+      <h1 class="stagger-item">FRONT END DEVELOPER</h1>
+      <p class="stagger-item">
+        I am Roman Robert, a self taught creative frontend developer that is thriving to master best practices in web development, making the internet a better place.
       </p>
       <div class="button-group">
-        <button class="primary">View Projects</button>
-        <button class="secondary">Read more</button>
+        <a href="#projects" onclick="lenis.scrollTo('#projects')">
+        <button class="primary stagger-item">View Projects</button>
+      </a>
+      <a href="#about" onclick="lenis.scrollTo('#about')">
+        <button class="secondary stagger-item">Read more</button>
+      </a>
+        
       </div>
     </section>
-    <section class="about wrapper" id="about">
+    <section class="about wrapper stagger-item" id="about">
       <div class="images">
         <div class="img-wrapper scroll-based-item">
           <img
@@ -58,9 +62,9 @@
             alt=""
           />
         </div>
-        <div class="img-wrapper scroll-based-item">
+        <div class="img-wrapper ">
           <img
-          src="https://plus.unsplash.com/premium_photo-1678715564125-c2132b9fee21?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="./assets/Picture.webp"
             alt=""
           />
         </div>
@@ -69,11 +73,8 @@
         <p class="accent-type scroll-based-item">About</p>
         <h2>Music, Coffee and Coding</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Exercitationem, placeat laboriosam! Optio repudiandae ea, voluptatibus
-          mollitia molestiae sed excepturi ut dignissimos a nulla, ducimus
-          voluptas quidem ullam at voluptatem nihil? Error, labore. Voluptate,
-          nobis voluptas quo quia velit labore! Iusto.
+            My main focus goes into developing responsive user friendly websites using latest front end technologies but also adapting to the clients need using low or no code platforms such as Webflow. <br> In my free time I like to spend time enjoying and making music, snowboarding and brewing coffee. 
+
         </p>
       </div>
     </section>
@@ -115,27 +116,33 @@
         <article class="project-card">
           <div class="project-img-wrapper ">
             <img
-              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="./assets/dopodoheal.svg"
               alt=""
             />
           </div>
           <section class="project-card-content">
             <h3>Dopodoheal</h3>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <button class="small ghost pill">Details</button>
+            <p>Website for podiatric private clinic</p>
+            <a href="./projects/dopdoheal.html">
+              <button class="small ghost pill">Details</button>
+            </a>
+            
           </section>
         </article>
         <article class="project-card ">
           <div class="project-img-wrapper ">
             <img
-              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="./assets/Easybank.svg"
               alt=""
             />
           </div>
           <section class="project-card-content">
-            <h3>Dopodoheal</h3>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <button class="small ghost pill">Details</button>
+            <h3>Easybank</h3>
+            <p>Banking landing page</p>
+            <a href="./projects/easybank.html">
+              <button class="small ghost pill">Details</button>
+            </a>
+            
           </section>
         </article>
       </div>
@@ -143,23 +150,28 @@
     <section class="cta wrapper scroll-based-item">
       <h2>Eager to explore my projects on other platforms ?</h2>
       <div class="button-group">
-        <button class="primary ">Explore ICodeThis</button>
-        <button class="secondary ">Explore Frontend Mentor</button>
+        <a href="https://icodethis.com/romanrobert" target="_blank">
+            <button class="primary">Explore ICodeThis</button>
+        </a>
+       <a href="https://www.frontendmentor.io/profile/romanrobert" target="_blank">
+            <button class="secondary">Explore Frontend Mentor</button>
+       </a>
+        
       </div>
     </section>
     <section class="contact wrapper">
       <div class="contact-content">
-        <p class="accent-type">Contact</p>
+        <p class="accent-type scroll-based-item">Contact</p>
         <h2>We love receiving messages from you, we are waiting for it.</h2>
         <ul>
-          <li class="contact-info">
+          <li class="contact-info scroll-based-item">
             <i class="fa-solid fa-phone-volume fa-lg"></i>
             <div class="info-wrapper">
               <p>Phone</p>
               <a href="tel:+40729620081">+40 729 620 081</a>
             </div>
           </li>
-          <li class="contact-info">
+          <li class="contact-info scroll-based-item">
             <i class="fa-solid fa-envelope fa-lg"></i>
             <div class="info-wrapper">
               <p>Email</p>
@@ -192,10 +204,14 @@
       </form>
     </section>
     <footer class="footer wrapper">
-        <img class="logo" src="./assets/logo.svg" alt="Roman Robert logo" />
-        <p>©Roman Robert 2024</p>
+      <div class="left">
+        <img class="logo" src="../assets/logo.svg" alt="Roman Robert logo" />
+        <p>Developed by yours trully in 2024 using Inter font-family and Font Awesome Icons and Greensock animation library.</p>
       </div>
-    </footer>
+     
+      <p>©Roman Robert 2024</p>
+    </div>
+  </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js" integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/split-type"></script>
