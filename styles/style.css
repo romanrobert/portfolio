@@ -289,6 +289,9 @@ header.main-header {
     display: block;
     z-index: 1000;
   }
+  .mobile-nav-btn:hover {
+    cursor: pointer;
+  }
   .nav-list {
     position: absolute;
     padding: 10rem 2rem;

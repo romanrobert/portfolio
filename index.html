@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="view-transition" content="same-origin"/>
+    <meta name="description" content="Explore stunning websites by an expert front-end developer! Discover user-friendly designs, seamless navigation, and the latest web technologies. Elevate your online presence with visually appealing and functional websites. Dive into a showcase of impressive digital work bringing your ideas to life. Ready to enhance your online success? Start your journey here with a front-end developer turning visions into engaging websites!">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,6 +13,7 @@
     />
      <link rel="stylesheet" href="./styles/style.css" />
     <title>Roman Robert | Frontend Developer</title>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module" defer></script> 
   </head>
   <body>
     <div class="blob"></div>
@@ -26,16 +28,17 @@
         <li class="nav-link"><a href="#home"onclick="lenis.scrollTo('#hero')">Home</a></li>
         <li class="nav-link"><a href="#about" onclick="lenis.scrollTo('#about')">About</a></li>
         <li class="nav-link"><a href="#projects" onclick="lenis.scrollTo('#projects')">Projects</a></li>
-        <li><button class="secondary small">Contact</button></li>
+        <li class="nav-link"><a href="#contact" onclick="lenis.scrollTo('#contact')">Contact</a></li>
+        <li>
+          <a href="./assets/romanrobert-resume.pdf" download="romanrobert-resume">
+            <button class="secondary small">Resume</button></a></li>
+          
+          
       </ul>
+      
 
-      <dotlottie-player
-        class="mobile-nav-btn"
-        src="https://lottie.host/aebd0d09-f0b3-4971-ab81-a0d5895e6851/HGCfTux5Qd.json"
-        background="transparent"
-        speed="1"
-        style="width: 40px; height: 40px"
-      ></dotlottie-player>
+    <dotlottie-player class="mobile-nav-btn" src="https://lottie.host/5100dc45-b544-4fda-867f-167171de9f52/X0XYTdJD9v.json" background="transparent" speed="1" style="width: 32px; height: 32px;" ></dotlottie-player>
+
     </header>
     <section class="hero wrapper" id="home">
       <p class="accent-type stagger-item">Roman Robert</p>
@@ -62,8 +65,8 @@
             alt=""
           />
         </div>
-        <div class="img-wrapper ">
-          <img
+        <div class="img-wrapper">
+          <img class="scroll-based-item"
           src="./assets/Picture.webp"
             alt=""
           />
@@ -80,10 +83,9 @@
     </section>
     <section class="skills wrapper" id="skills">
       <div class="skills-content">
-        <p class="accent-type scroll-based-item">Development</p>
+        <p class="accent-type scroll-based-item">Services</p>
         <h2>
-          Create solutions to repetitive problems, design applications and
-          access anywhere!
+          Transforming Ideas into Interactive Digital Experiences
         </h2>
         <p>
           Just tell us your repetitive problem or the primitive method used

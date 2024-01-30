@@ -29,11 +29,15 @@ navigationLinks.forEach((link) => {
 
 mobileMenuButton.addEventListener("click", () => {
   if (mobileNavigation.style.opacity !== "1") {
+    mobileMenuButton.setDirection(1);
+    mobileMenuButton.play();
     setTimeout(() => {
       staggerItemsIn(navigationLinks);
     }, 500);
     openNavigation(mobileNavigation);
   } else {
+    mobileMenuButton.setDirection(-1);
+    mobileMenuButton.play();
     staggerItemsOut(navigationLinks);
     closeNavigation(mobileNavigation);
   }
