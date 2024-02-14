@@ -4,10 +4,11 @@ const mobileMenuButton = document.querySelector(".mobile-nav-btn");
 const mobileNavigation = document.querySelector(".nav-list");
 const navigationLinks = mobileNavigation.querySelectorAll("li");
 const staggerItems = document.querySelectorAll(".stagger-item");
+const body = document.querySelector("body");
 
-window.onload = () => {
+document.addEventListener("DOMContentLoaded", () => {
   staggerItemsIn(staggerItems);
-};
+});
 
 let windowWidth = window.innerWidth;
 
@@ -79,3 +80,45 @@ const resetStyle = (items) => {
     item.style.transform = "";
   });
 };
+
+//preloader
+
+const preloader = document.querySelector(".preloader");
+const progressBar = document.querySelector(".progress-bar-wrapper");
+
+document.onreadystatechange = function () {
+  if (document.readyState === "complete") {
+    progressBar.style.opacity = "0";
+    setTimeout(() => {
+      preloader.style.maxHeight = "0vh";
+    }, 200);
+  }
+};
+
+window.addEventListener("load", () => {
+  progressBar.style.opacity = "0";
+  setTimeout(() => {
+    preloader.style.maxHeight = "0vh";
+  }, 200);
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  const progressEl = document.querySelector(".progress");
+  const allElementsLength = document.getElementsByTagName("*").length;
+  const allElements = document.querySelectorAll("*");
+  let loadedElements = 0;
+
+  const updateProgress = function () {
+    loadedElements++;
+    const progress = (loadedElements / allElementsLength) * 100;
+    progressEl.style.width = progress + "%";
+  };
+
+  allElements.forEach((element) => {
+    setInterval(() => {
+      updateProgress();
+    }, 500);
+  });
+
+  updateProgress();
+});
