@@ -83,42 +83,42 @@ const resetStyle = (items) => {
 
 //preloader
 
-const preloader = document.querySelector(".preloader");
-const progressBar = document.querySelector(".progress-bar-wrapper");
+// const preloader = document.querySelector(".preloader");
+// const progressBar = document.querySelector(".progress-bar-wrapper");
 
-document.onreadystatechange = function () {
-  if (document.readyState === "complete") {
-    progressBar.style.opacity = "0";
-    setTimeout(() => {
-      preloader.style.maxHeight = "0vh";
-    }, 200);
-  }
-};
+// document.onreadystatechange = function () {
+//   if (document.readyState === "complete") {
+//     progressBar.style.opacity = "0";
+//     setTimeout(() => {
+//       preloader.style.maxHeight = "0vh";
+//     }, 200);
+//   }
+// };
 
-window.addEventListener("load", () => {
-  progressBar.style.opacity = "0";
-  setTimeout(() => {
-    preloader.style.maxHeight = "0vh";
-  }, 200);
-});
+// window.addEventListener("load", () => {
+//   progressBar.style.opacity = "0";
+//   setTimeout(() => {
+//     preloader.style.maxHeight = "0vh";
+//   }, 200);
+// });
 
-window.addEventListener("DOMContentLoaded", () => {
-  const progressEl = document.querySelector(".progress");
-  const allElementsLength = document.getElementsByTagName("*").length;
-  const allElements = document.querySelectorAll("*");
-  let loadedElements = 0;
+// window.addEventListener("DOMContentLoaded", () => {
+//   const progressEl = document.querySelector(".progress");
+//   const allElementsLength = document.getElementsByTagName("*").length;
+//   const allElements = document.querySelectorAll("*");
+//   let loadedElements = 0;
 
-  const updateProgress = function () {
-    loadedElements++;
-    const progress = (loadedElements / allElementsLength) * 100;
-    progressEl.style.width = progress + "%";
-  };
+//   const updateProgress = function () {
+//     loadedElements++;
+//     const progress = (loadedElements / allElementsLength) * 100;
+//     progressEl.style.width = progress + "%";
+//   };
 
-  allElements.forEach((element) => {
-    setInterval(() => {
-      updateProgress();
-    }, 500);
-  });
+//   allElements.forEach((element) => {
+//     setInterval(() => {
+//       updateProgress();
+//     }, 500);
+//   });
 
-  updateProgress();
-});
+//   updateProgress();
+// });

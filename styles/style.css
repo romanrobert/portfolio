@@ -395,47 +395,16 @@ section.hero .button-group {
   }
 }
 .blob {
-  --position-x: 4vw;
-  --position-y: 5vh;
-  --animate-to-x: 10vw;
-  --animate-to-y: 20vh;
   position: fixed;
   z-index: -1;
   background: linear-gradient(to right, #c2e59c, #64b3f4);
-  width: 15rem;
-  height: 15rem;
+  width: 25rem;
+  height: 25rem;
   border-radius: 100vw;
   filter: blur(50px);
   opacity: 0.2;
-  animation: move 10s cubic-bezier(0.46, 0.03, 0.52, 0.96) infinite alternate;
 }
 
-.blob:nth-child(2) {
-  background-color: linear-gradient(to right, #fe8c00, #f83600);
-  width: 25rem;
-  height: 25rem;
-}
-
-.blob:nth-child(3) {
-  background-color: linear-gradient(to right, #ba5370, #f4e2d8);
-  width: 20rem;
-  height: 20rem;
-}
-
-.blob:nth-child(4) {
-  background-color: linear-gradient(to right, #fffc00, #ffffff);
-  width: 5rem;
-  height: 5rem;
-}
-
-@keyframes move {
-  0% {
-    transform: translate(var(--position-x), var(--position-y));
-  }
-  100% {
-    transform: translate(var(--animate-to-x), var(--animate-to-y));
-  }
-}
 section.skills {
   margin-top: 12.5rem;
   display: flex;

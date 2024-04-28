@@ -1,23 +1,35 @@
-const blobs = document.querySelectorAll(".blob");
+const blob = document.querySelector(".blob");
 
-const getRandomNumber = (min, max) => {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-};
+window.addEventListener("mousemove", (e) => {
+  var blobWidth = blob.offsetWidth;
+  var blobHeight = blob.offsetHeight;
+  let x = e.clientX - blobWidth / 2;
+  let y = e.clientY - blobHeight / 2;
 
-const updateBlobPosition = () => {
-  blobs.forEach((blob) => {
-    blob.style.setProperty("--position-x", `${getRandomNumber(1, 100)}vw`);
-    blob.style.setProperty("--position-y", `${getRandomNumber(1, 20)}vh`);
-  });
-};
+  setTimeout(() => {
+    blob.style.left = `${x}px`;
+    blob.style.top = `${y}px`;
+  }, 100);
+});
 
-const updateBlobMovement = () => {
-  blobs.forEach((blob) => {
-    blob.style.setProperty("--animate-to-y", `${getRandomNumber(1, 50)}vh`);
-    blob.style.setProperty("--animate-to-x", `${getRandomNumber(1, 100)}vw`);
-  });
-};
+// const getRandomNumber = (min, max) => {
+//   return Math.floor(Math.random() * (max - min + 1)) + min;
+// };
 
-updateBlobPosition();
+// const updateBlobPosition = () => {
+//   blobs.forEach((blob) => {
+//     blob.style.setProperty("--position-x", `${getRandomNumber(1, 100)}vw`);
+//     blob.style.setProperty("--position-y", `${getRandomNumber(1, 20)}vh`);
+//   });
+// };
 
-setInterval(updateBlobMovement, 20000);
+// const updateBlobMovement = () => {
+//   blobs.forEach((blob) => {
+//     blob.style.setProperty("--animate-to-y", `${getRandomNumber(1, 50)}vh`);
+//     blob.style.setProperty("--animate-to-x", `${getRandomNumber(1, 100)}vw`);
+//   });
+// };
+
+// updateBlobPosition();
+
+// setInterval(updateBlobMovement, 20000);
